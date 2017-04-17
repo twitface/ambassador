@@ -1,0 +1,5 @@
+containers:
+ - name: ambassador
+   source: ambassador/Dockerfile
+ - name: sds
+   source: sds/Dockerfile
