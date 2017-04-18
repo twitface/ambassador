@@ -1,0 +1,19 @@
+#!/usr/bin/python
+
+import os, sys, yaml
+
+BASE = os.path.dirname(__file__)
+
+with open(sys.argv[1]) as f:
+    md = yaml.load(f)
+
+yaml = ""
+
+with open(os.path.join(BASE, "ambassador-http.yaml")) as f:
+    yaml += f.read()
+
+with open(os.path.join(BASE, "ambassador.yaml")) as f:
+    yaml += f.read().replace("__SDS_IMAGE__", md["images"]["sds"]) \
+                    .replace("__AMBASSADOR_IMAGE__", md["images"]["ambassador"])
+
+print yaml,
