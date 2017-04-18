@@ -47,6 +47,7 @@ class EnvoyConfig (object):
     {{
         "timeout_ms": 0,
         "prefix": "{url_prefix}",
+        "prefix_rewrite": "/",
         "cluster": "{cluster_name}"
     }}
     '''
