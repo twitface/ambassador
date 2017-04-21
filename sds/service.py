@@ -7,13 +7,10 @@ import requests
 
 from flask import Flask, jsonify, request
 
-logPath = "/tmp/flasklog"
-
 MyHostName = socket.gethostname()
 MyResolvedName = socket.gethostbyname(socket.gethostname())
 
 logging.basicConfig(
-    filename=logPath,
     level=logging.DEBUG, # if appDebug else logging.INFO,
     format="%(asctime)s ambassador-sds 0.0.1 %(levelname)s: %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S"
@@ -76,5 +73,4 @@ def main():
     app.run(host='0.0.0.0', port=5000, debug=True)
 
 if __name__ == '__main__':
-    print "asdf"
     main()
