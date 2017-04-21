@@ -52,7 +52,7 @@
           }
         ]
       },
-      "refresh_delay_ms": 15000      
+      "refresh_delay_ms": 250
     },
     "clusters": []
   }
