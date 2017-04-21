@@ -46,6 +46,8 @@ def handle_endpoint(service_name):
     hostdicts = []
     ports = []
 
+    logging.info("%s endpoints: %s" %  (service_name, endpoints))
+
     subsets = endpoints.get("subsets", [])
 
     for subset in subsets:
