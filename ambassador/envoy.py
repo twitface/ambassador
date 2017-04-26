@@ -58,7 +58,7 @@ class EnvoyConfig (object):
         "name": "{cluster_name}",
         "connect_timeout_ms": 250,
         "type": "strict_dns",
-        "hosts": [{"url": "tcp://{service_name}:80"}],
+        "hosts": [{{"url": "tcp://{service_name}:80"}}],
         "service_name": "{service_name}",
         "lb_type": "round_robin"
     }}
